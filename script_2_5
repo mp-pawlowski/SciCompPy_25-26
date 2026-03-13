@@ -1,0 +1,28 @@
+# 2.5
+
+#Let S be a long string (many lines).
+
+S = """Lorem ipsum dolor sit amet, 
+consectetur adipiscing elit. Aenean 
+vehicula sapien vel nulla ultricies, 
+ac mollis mi consequat."""
+
+#Find the number of black characters in S [not whitespace, see the method S.isspace()].
+
+l = S.split()
+len("".join(l))
+
+#Find the number of words in S (a word is a sequence of black characters).
+
+len(l)
+
+#Find the longest word in S.
+
+max(l, key = len)
+
+#Sort words from S according to (1) the lexicographic order, (2) the length.
+
+#1
+l.sort(key = str.lower)
+#2
+l.sort(key = len)
