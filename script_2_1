@@ -1,6 +1,0 @@
-# 2.1
-
-#Create a long positive integer. Find the number of zeros. Hint: change the number to a string.
-
-l = 20150615486413100505051315431035
-str(l).count("0")
