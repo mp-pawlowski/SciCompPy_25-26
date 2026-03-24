@@ -1,0 +1,22 @@
+# 4.1
+
+#Let p=(x,y) be a point in a plane. Define the following functions using lambda:
+#(a) a test if p is in unit (filled) circle,
+#(b) a test if the coordinates of p are positive,
+#(c) a sorting key (y decreasing, x increasing),
+#(d) a sorting key (the sum |x|+|y|).
+
+import math
+p = [(1, -1), (0.5, 0.5), (-2, -3), (8, 0), (5.5, -3), (0.7, -0.25), (6, 7)]
+
+#A
+list(filter((lambda a: math.dist(a, (0, 0)) <= 1), p))
+
+#B
+list(filter((lambda a: ((a[0] > 0) & (a[1] > 0))), p))
+
+#C
+p.sort(key = lambda a: (-a[1], a[0]))
+
+#D
+p.sort(key = lambda a: (abs(a[0]) + abs(a[1])))
