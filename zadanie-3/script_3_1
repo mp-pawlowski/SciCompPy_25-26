@@ -1,0 +1,10 @@
+# 3.1
+
+# For a given word (you may use your name), print it in squares.
+
+s = "Michał"
+border = "+---" * len(s) + "+"
+line = "|"
+for c in s:
+    line = line + " " + c + " |"
+print("{}\n{}\n{}".format(border,line,border))
