@@ -1,0 +1,19 @@
+# 4.2
+
+#Reversing a part of a list in place, reverse_range(L, left, right),
+# the right index is included. Write iterative and recursive versions.
+
+L = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+def reverse_range_i(x, y, z):
+    while y < z:
+        a, b = x[y], x[z]
+        x[z], x[y] = a, b
+        y += 1
+        z -= 1
+
+def reverse_range_r(x, y, z):
+    if y < z:
+        a, b = x[y], x[z]
+        x[z], x[y] = a, b
+        reverse_range_r(x, y + 1, z - 1)
