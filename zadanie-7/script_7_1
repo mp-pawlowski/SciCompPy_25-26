@@ -1,0 +1,38 @@
+# 7.1
+
+# Create a function find_axis(v1, v2) which returns the unit vector v3,
+# where v3 is perpendicular to the vectors v1 and v2. If the vectors v1 and v2
+# are parallel (or zero) then the function should raise an exception (ValueError)
+# [Hint: v1 and v2 are parallel if the cross product v1 × v2 is zero].
+# Vectors are instances of the Vector class from Homework 6.
+
+import math
+import builtins
+
+class Vector:
+
+    def __init__(self, x, y, z):
+        self.x = x
+        self.y = y
+        self.z = z
+
+    def __repr__(self):         # return string "Vector(x, y, z)"
+        return "Vector ({}, {}, {})".format(self.x, self.y, self.z)
+
+    def cross(self, other):     # return the cross product (Vector)
+        return Vector(self.y * other.z - self.z * other.y,
+                      self.z * other.x - self.x * other.z,
+                      self.x * other.y - self.y * other.x)
+
+    def length(self):           # the length of the vector
+        return math.sqrt(self.x ** 2 + self.y ** 2 + self.z ** 2)
+
+def axis(vector1, vector2):
+    if vector1.length() == 0 or vector2.length() == 0:
+        raise ValueError("Vector is null")
+    elif vector1.cross(vector2) == Vector(0,0,0):
+        raise ValueError("Vectors are parallel")
+    else:
+        return Vector(vector1.cross(vector2).x / vector1.cross(vector2).length(),
+                      vector1.cross(vector2).y / vector1.cross(vector2).length(),
+                      vector1.cross(vector2).z / vector1.cross(vector2).length())
