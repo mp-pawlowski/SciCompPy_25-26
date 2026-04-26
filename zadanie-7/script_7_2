@@ -1,0 +1,41 @@
+# 7.2
+
+# Create the following infinite iterators:
+
+# (a) returning 0, 1, 0, 1, 0, 1, ...,
+
+import itertools
+iter1 = itertools.cycle(range(0,2))
+
+x = 0
+for i in iter1:
+    if x == 10:
+        break
+    else:
+        print(i)
+        x += 1
+
+# (b) returning randomly 0 or 1 on demand,
+
+import random
+iter2 = map(random.getrandbits, itertools.repeat(1))
+
+x = 0
+for i in iter2:
+    if x == 10:
+        break
+    else:
+        print(i)
+        x += 1
+
+# (c) returning 0, 1, 0, -1, 0, 1, 0, -1, ...
+
+iter3 = itertools.cycle([0, 1, 0, -1])
+
+x = 0
+for i in iter3:
+    if x == 10:
+        break
+    else:
+        print(i)
+        x += 1
