@@ -1,0 +1,16 @@
+# 8.3
+
+#(a) Create a two dimensional array called m1, shape=(4,5).
+#(b) Create a new array (or a view) m2 from m1, in which the elements
+# of each row are in reverse order.
+#(c) Create a new array (or a view) m3 from m1, in which the elements
+# of each column are in reverse order.
+#(d) Remove the first row, the last row, the first column, and the last
+# column of m1, and create a new array (or a view) m4.
+
+import numpy as np
+
+m1 = np.arange(20).reshape((4, 5))
+m2 = m1[:, ::-1]
+m3 = m1[::-1, :]
+m4 = m1[1:-1, 1:-1]
