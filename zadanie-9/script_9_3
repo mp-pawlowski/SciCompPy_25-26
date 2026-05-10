@@ -1,0 +1,23 @@
+# 9.3
+
+# Create a function that calculates, for the point (x,y), the sum of distances from
+# two points in the plane: (-1,0) and (1,0). Show the function values using imshow().
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+def two_pt_dist(point):
+    a = np.sqrt((point[0] + 1)**2 + (point[1])**2)
+    b = np.sqrt((point[0] - 1)**2 + (point[1])**2)
+    return a+b
+
+bbox = 3
+x = np.linspace(-bbox, bbox, 101)
+y = np.linspace(-bbox, bbox, 101)
+xx, yy = np.meshgrid(x, y)
+
+data = two_pt_dist((xx, yy))
+plt.imshow(data, extent = [-bbox, bbox, -bbox, bbox], aspect = 'equal')
+plt.plot([1, -1], [0, 0], 'r.')
+plt.colorbar()
+plt.show()
