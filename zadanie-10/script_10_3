@@ -1,0 +1,18 @@
+# 10.3
+
+# Create pd.DataFrame for the periodic table (ten elements).
+# Column names are Name, Symbol, Weight. index starts from 1 for hydrogen.
+
+import pandas as pd
+import numpy as np
+
+elements = {
+    "Name": ["Hydrogen", "Helium", "Lithium", "Beryllium", "Boron",
+             "Carbon", "Nitrogen", "Oxygen", "Fluorine", "Neon"],
+    "Symbol": ["H", "He", "Li", "Be", "B", "C", "N", "O", "F", "Ne"],
+    "Weight": [1, 4, 7, 9, 10, 12, 14, 16, 19, 20]
+}
+
+periodic_table = pd.DataFrame(elements, index=range(1, 11))
+
+periodic_table
