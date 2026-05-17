@@ -1,0 +1,85 @@
+# 10.1
+
+# Create a virtual environment for this course using venv or virtualenv.
+# Install numpy, matplotlib, pandas. Send me a list of commands used with outputs.
+
+D:\Downloads>py -m venv PY_10_1
+
+D:\Downloads>PY_10_1\Scripts\activate.bat
+
+(PY_10_1) D:\Downloads>PY_10_1\Scripts\python.exe -m pip install --upgrade pip
+Requirement already satisfied: pip in d:\downloads\py_10_1\lib\site-packages (25.3)
+Collecting pip
+  Using cached pip-26.1.1-py3-none-any.whl.metadata (4.6 kB)
+Using cached pip-26.1.1-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 25.3
+    Uninstalling pip-25.3:
+      Successfully uninstalled pip-25.3
+Successfully installed pip-26.1.1
+
+(PY_10_1) D:\Downloads>pip install numpy
+Requirement already satisfied: numpy in .\PY_10_1\Lib\site-packages (2.4.5)
+
+(PY_10_1) D:\Downloads>pip install matplotlib
+WARNING: Cache entry deserialization failed, entry ignored
+Collecting matplotlib
+  Using cached matplotlib-3.10.9-cp314-cp314-win_amd64.whl.metadata (52 kB)
+WARNING: Cache entry deserialization failed, entry ignored
+Collecting contourpy>=1.0.1 (from matplotlib)
+  Using cached contourpy-1.3.3-cp314-cp314-win_amd64.whl.metadata (5.5 kB)
+WARNING: Cache entry deserialization failed, entry ignored
+Collecting cycler>=0.10 (from matplotlib)
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+WARNING: Cache entry deserialization failed, entry ignored
+Collecting fonttools>=4.22.0 (from matplotlib)
+  Using cached fonttools-4.63.0-cp314-cp314-win_amd64.whl.metadata (121 kB)
+WARNING: Cache entry deserialization failed, entry ignored
+Collecting kiwisolver>=1.3.1 (from matplotlib)
+  Using cached kiwisolver-1.5.0-cp314-cp314-win_amd64.whl.metadata (5.2 kB)
+Requirement already satisfied: numpy>=1.23 in .\PY_10_1\Lib\site-packages (from matplotlib) (2.4.5)
+WARNING: Cache entry deserialization failed, entry ignored
+Collecting packaging>=20.0 (from matplotlib)
+  Using cached packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+WARNING: Cache entry deserialization failed, entry ignored
+Collecting pillow>=8 (from matplotlib)
+  Using cached pillow-12.2.0-cp314-cp314-win_amd64.whl.metadata (9.0 kB)
+WARNING: Cache entry deserialization failed, entry ignored
+Collecting pyparsing>=3 (from matplotlib)
+  Using cached pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+WARNING: Cache entry deserialization failed, entry ignored
+Collecting python-dateutil>=2.7 (from matplotlib)
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+WARNING: Cache entry deserialization failed, entry ignored
+Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib)
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Using cached matplotlib-3.10.9-cp314-cp314-win_amd64.whl (8.3 MB)
+Using cached contourpy-1.3.3-cp314-cp314-win_amd64.whl (232 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Using cached fonttools-4.63.0-cp314-cp314-win_amd64.whl (2.3 MB)
+Using cached kiwisolver-1.5.0-cp314-cp314-win_amd64.whl (75 kB)
+Using cached packaging-26.2-py3-none-any.whl (100 kB)
+Using cached pillow-12.2.0-cp314-cp314-win_amd64.whl (7.2 MB)
+Using cached pyparsing-3.3.2-py3-none-any.whl (122 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: six, pyparsing, pillow, packaging, kiwisolver, fonttools, cycler, contourpy, python-dateutil, matplotlib
+Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.63.0 kiwisolver-1.5.0 matplotlib-3.10.9 packaging-26.2 pillow-12.2.0 pyparsing-3.3.2 python-dateutil-2.9.0.post0 six-1.17.0
+
+(PY_10_1) D:\Downloads>pip install pandas
+WARNING: Cache entry deserialization failed, entry ignored
+Collecting pandas
+  Using cached pandas-3.0.3-cp314-cp314-win_amd64.whl.metadata (19 kB)
+Requirement already satisfied: numpy>=2.3.3 in .\PY_10_1\Lib\site-packages (from pandas) (2.4.5)
+Requirement already satisfied: python-dateutil>=2.8.2 in .\PY_10_1\Lib\site-packages (from pandas) (2.9.0.post0)
+WARNING: Cache entry deserialization failed, entry ignored
+Collecting tzdata (from pandas)
+  Using cached tzdata-2026.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Requirement already satisfied: six>=1.5 in .\PY_10_1\Lib\site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+Using cached pandas-3.0.3-cp314-cp314-win_amd64.whl (9.9 MB)
+Using cached tzdata-2026.2-py2.py3-none-any.whl (349 kB)
+Installing collected packages: tzdata, pandas
+Successfully installed pandas-3.0.3 tzdata-2026.2
+
+(PY_10_1) D:\Downloads>deactivate
